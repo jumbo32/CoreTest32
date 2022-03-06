@@ -11,6 +11,8 @@
 		8FE0755E27D502A4008E08D3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE0755D27D502A4008E08D3 /* ContentView.swift */; };
 		8FE0756027D502A6008E08D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FE0755F27D502A6008E08D3 /* Assets.xcassets */; };
 		8FE0756327D502A6008E08D3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FE0756227D502A6008E08D3 /* Preview Assets.xcassets */; };
+		8FE0756A27D5031C008E08D3 /* DataControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE0756927D5031C008E08D3 /* DataControler.swift */; };
+		8FE0756D27D506C3008E08D3 /* CoreADB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8FE0756B27D506C3008E08D3 /* CoreADB.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		8FE0755D27D502A4008E08D3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8FE0755F27D502A6008E08D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FE0756227D502A6008E08D3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8FE0756927D5031C008E08D3 /* DataControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataControler.swift; sourceTree = "<group>"; };
+		8FE0756C27D506C3008E08D3 /* CoreADB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreADB.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,9 +56,11 @@
 			isa = PBXGroup;
 			children = (
 				8FE0755B27D502A4008E08D3 /* CoreADBMarch22App.swift */,
+				8FE0756927D5031C008E08D3 /* DataControler.swift */,
 				8FE0755D27D502A4008E08D3 /* ContentView.swift */,
 				8FE0755F27D502A6008E08D3 /* Assets.xcassets */,
 				8FE0756127D502A6008E08D3 /* Preview Content */,
+				8FE0756B27D506C3008E08D3 /* CoreADB.xcdatamodeld */,
 			);
 			path = CoreADBMarch22;
 			sourceTree = "<group>";
@@ -137,7 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FE0756D27D506C3008E08D3 /* CoreADB.xcdatamodeld in Sources */,
 				8FE0755E27D502A4008E08D3 /* ContentView.swift in Sources */,
+				8FE0756A27D5031C008E08D3 /* DataControler.swift in Sources */,
 				8FE0755C27D502A4008E08D3 /* CoreADBMarch22App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +347,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8FE0756B27D506C3008E08D3 /* CoreADB.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8FE0756C27D506C3008E08D3 /* CoreADB.xcdatamodel */,
+			);
+			currentVersion = 8FE0756C27D506C3008E08D3 /* CoreADB.xcdatamodel */;
+			path = CoreADB.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8FE0755027D502A4008E08D3 /* Project object */;
 }
