@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:">
+      location = "self:/Users/adbdev/Documents/Xcode/CoreADBMarch22DF/CoreADBMarch22DF.xcodeproj">
    </FileRef>
 </Workspace>

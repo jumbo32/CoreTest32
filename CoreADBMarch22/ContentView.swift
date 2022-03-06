@@ -9,24 +9,34 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
-    @FetchRequest(sortDescriptors: []) var students: FetchedResults<Student>
+    @State private var lastNameFilter = "A"
+    
     var body: some View {
         VStack {
-            List(students) { student in
-                Text(student.name ?? "unknown")
-            }
+            FilteredList(filter: lastNameFilter)
+            
             Button("Add") {
-                let firstNames = ["Ginny", "Harry", "Hermione", "Luna", "Ron"]
-                let lastNames = ["Granger", "Lovegood", "Potter", "Weasley"]
+                let taylor = Singer(context: moc)
+                taylor.firstName = "Taylor"
+                taylor.lastName = "Swift"
                 
-                let chosenFirstName = firstNames.randomElement()!
-                let chosenLastName = lastNames.randomElement()!
+                let ed = Singer(context: moc)
+                ed.firstName = "Ed"
+                ed.lastName = "Sheeran"
                 
-                let student = Student(context: moc)
-                student.id = UUID()
-                student.name = "\(chosenFirstName) \(chosenLastName)"
+                let adele = Singer(context: moc)
+                adele.firstName = "Adele"
+                adele.lastName = "Adkins"
                 
                 try? moc.save()
+            }
+            
+            Button("Show A") {
+                lastNameFilter = "A"
+            }
+            
+            Button("Show S") {
+                lastNameFilter = "S"
             }
             
         }

@@ -12,17 +12,23 @@
 		8FE0756027D502A6008E08D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FE0755F27D502A6008E08D3 /* Assets.xcassets */; };
 		8FE0756327D502A6008E08D3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FE0756227D502A6008E08D3 /* Preview Assets.xcassets */; };
 		8FE0756A27D5031C008E08D3 /* DataControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE0756927D5031C008E08D3 /* DataControler.swift */; };
-		8FE0756D27D506C3008E08D3 /* CoreADB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8FE0756B27D506C3008E08D3 /* CoreADB.xcdatamodeld */; };
+		8FE0757027D511FF008E08D3 /* CoreADBDF.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8FE0756E27D511FF008E08D3 /* CoreADBDF.xcdatamodeld */; };
+		8FE0757327D51375008E08D3 /* Singer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE0757127D51375008E08D3 /* Singer+CoreDataClass.swift */; };
+		8FE0757427D51375008E08D3 /* Singer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE0757227D51375008E08D3 /* Singer+CoreDataProperties.swift */; };
+		8FE0757627D51777008E08D3 /* FilteredList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE0757527D51777008E08D3 /* FilteredList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8FE0755827D502A4008E08D3 /* CoreADBMarch22.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreADBMarch22.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FE0755827D502A4008E08D3 /* CoreADBMarch22DF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreADBMarch22DF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FE0755B27D502A4008E08D3 /* CoreADBMarch22App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreADBMarch22App.swift; sourceTree = "<group>"; };
 		8FE0755D27D502A4008E08D3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8FE0755F27D502A6008E08D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FE0756227D502A6008E08D3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8FE0756927D5031C008E08D3 /* DataControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataControler.swift; sourceTree = "<group>"; };
-		8FE0756C27D506C3008E08D3 /* CoreADB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreADB.xcdatamodel; sourceTree = "<group>"; };
+		8FE0756F27D511FF008E08D3 /* CoreADBDF.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreADBDF.xcdatamodel; sourceTree = "<group>"; };
+		8FE0757127D51375008E08D3 /* Singer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Singer+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8FE0757227D51375008E08D3 /* Singer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Singer+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8FE0757527D51777008E08D3 /* FilteredList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +45,8 @@
 		8FE0754F27D502A4008E08D3 = {
 			isa = PBXGroup;
 			children = (
+				8FE0757127D51375008E08D3 /* Singer+CoreDataClass.swift */,
+				8FE0757227D51375008E08D3 /* Singer+CoreDataProperties.swift */,
 				8FE0755A27D502A4008E08D3 /* CoreADBMarch22 */,
 				8FE0755927D502A4008E08D3 /* Products */,
 			);
@@ -47,7 +55,7 @@
 		8FE0755927D502A4008E08D3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8FE0755827D502A4008E08D3 /* CoreADBMarch22.app */,
+				8FE0755827D502A4008E08D3 /* CoreADBMarch22DF.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,9 +66,10 @@
 				8FE0755B27D502A4008E08D3 /* CoreADBMarch22App.swift */,
 				8FE0756927D5031C008E08D3 /* DataControler.swift */,
 				8FE0755D27D502A4008E08D3 /* ContentView.swift */,
+				8FE0757527D51777008E08D3 /* FilteredList.swift */,
 				8FE0755F27D502A6008E08D3 /* Assets.xcassets */,
 				8FE0756127D502A6008E08D3 /* Preview Content */,
-				8FE0756B27D506C3008E08D3 /* CoreADB.xcdatamodeld */,
+				8FE0756E27D511FF008E08D3 /* CoreADBDF.xcdatamodeld */,
 			);
 			path = CoreADBMarch22;
 			sourceTree = "<group>";
@@ -76,9 +85,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8FE0755727D502A4008E08D3 /* CoreADBMarch22 */ = {
+		8FE0755727D502A4008E08D3 /* CoreADBMarch22DF */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8FE0756627D502A6008E08D3 /* Build configuration list for PBXNativeTarget "CoreADBMarch22" */;
+			buildConfigurationList = 8FE0756627D502A6008E08D3 /* Build configuration list for PBXNativeTarget "CoreADBMarch22DF" */;
 			buildPhases = (
 				8FE0755427D502A4008E08D3 /* Sources */,
 				8FE0755527D502A4008E08D3 /* Frameworks */,
@@ -88,9 +97,9 @@
 			);
 			dependencies = (
 			);
-			name = CoreADBMarch22;
+			name = CoreADBMarch22DF;
 			productName = CoreADBMarch22;
-			productReference = 8FE0755827D502A4008E08D3 /* CoreADBMarch22.app */;
+			productReference = 8FE0755827D502A4008E08D3 /* CoreADBMarch22DF.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -108,7 +117,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8FE0755327D502A4008E08D3 /* Build configuration list for PBXProject "CoreADBMarch22" */;
+			buildConfigurationList = 8FE0755327D502A4008E08D3 /* Build configuration list for PBXProject "CoreADBMarch22DF" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -121,7 +130,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8FE0755727D502A4008E08D3 /* CoreADBMarch22 */,
+				8FE0755727D502A4008E08D3 /* CoreADBMarch22DF */,
 			);
 		};
 /* End PBXProject section */
@@ -143,10 +152,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FE0756D27D506C3008E08D3 /* CoreADB.xcdatamodeld in Sources */,
+				8FE0757027D511FF008E08D3 /* CoreADBDF.xcdatamodeld in Sources */,
+				8FE0757427D51375008E08D3 /* Singer+CoreDataProperties.swift in Sources */,
 				8FE0755E27D502A4008E08D3 /* ContentView.swift in Sources */,
+				8FE0757327D51375008E08D3 /* Singer+CoreDataClass.swift in Sources */,
 				8FE0756A27D5031C008E08D3 /* DataControler.swift in Sources */,
 				8FE0755C27D502A4008E08D3 /* CoreADBMarch22App.swift in Sources */,
+				8FE0757627D51777008E08D3 /* FilteredList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,8 +301,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ADBDEV.CoreADBMarch22;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = ADBDEV.CoreADBMarch22DF;
+				PRODUCT_NAME = CoreADBMarch22DF;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -317,8 +329,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ADBDEV.CoreADBMarch22;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = ADBDEV.CoreADBMarch22DF;
+				PRODUCT_NAME = CoreADBMarch22DF;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -328,7 +340,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8FE0755327D502A4008E08D3 /* Build configuration list for PBXProject "CoreADBMarch22" */ = {
+		8FE0755327D502A4008E08D3 /* Build configuration list for PBXProject "CoreADBMarch22DF" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8FE0756427D502A6008E08D3 /* Debug */,
@@ -337,7 +349,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8FE0756627D502A6008E08D3 /* Build configuration list for PBXNativeTarget "CoreADBMarch22" */ = {
+		8FE0756627D502A6008E08D3 /* Build configuration list for PBXNativeTarget "CoreADBMarch22DF" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8FE0756727D502A6008E08D3 /* Debug */,
@@ -349,13 +361,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		8FE0756B27D506C3008E08D3 /* CoreADB.xcdatamodeld */ = {
+		8FE0756E27D511FF008E08D3 /* CoreADBDF.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				8FE0756C27D506C3008E08D3 /* CoreADB.xcdatamodel */,
+				8FE0756F27D511FF008E08D3 /* CoreADBDF.xcdatamodel */,
 			);
-			currentVersion = 8FE0756C27D506C3008E08D3 /* CoreADB.xcdatamodel */;
-			path = CoreADB.xcdatamodeld;
+			currentVersion = 8FE0756F27D511FF008E08D3 /* CoreADBDF.xcdatamodel */;
+			path = CoreADBDF.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
