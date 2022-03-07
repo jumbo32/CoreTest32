@@ -13,7 +13,12 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            FilteredList(filter: lastNameFilter)
+// Hord Coded FilteredList
+//            FilteredList(filter: lastNameFilter)
+// New Dynamic FilteredList Call
+            FilteredList(filterKey: "lastName", filterValue: lastNameFilter) { (singer: Singer) in
+                Text("\(singer.wrappedFirstName) \(singer.wrappedLastName)")
+            }
             
             Button("Add") {
                 let taylor = Singer(context: moc)
