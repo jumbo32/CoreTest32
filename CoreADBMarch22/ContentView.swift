@@ -58,7 +58,12 @@ struct ContentView: View {
 
             Button("Sort Z-A") {
                 sortDescriptors = [SortDescriptor(\.firstName, order: .reverse)]
-            }        }
+            }
+            
+            Button("Sort Rest") {
+                sortDescriptors = [SortDescriptor<Singer>]()
+            }
+        }
     }
 }
 
