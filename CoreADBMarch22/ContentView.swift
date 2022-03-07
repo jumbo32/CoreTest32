@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
     @State private var lastNameFilter = "A"
-    @State private var filterType = "CONTAINS[c]"
+    @State private var filterType = FilterType.beginsWith
     var body: some View {
         VStack {
 // Hord Coded FilteredList
@@ -44,11 +44,11 @@ struct ContentView: View {
                 lastNameFilter = "S"
             }
             Button("Begins with") {
-                filterType = "BEGINSWITH"
+                filterType = .beginsWith
             }
 
             Button("Contains") {
-                filterType = "CONTAINS[c]"
+                filterType = .contains
             }
         }
     }

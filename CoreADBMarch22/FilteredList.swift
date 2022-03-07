@@ -21,7 +21,12 @@ import SwiftUI
 //        _fetchRequest = FetchRequest<Singer>(sortDescriptors: [], predicate: NSPredicate(format: "lastName BEGINSWITH %@", filter))
 //    }
 // Example of generic filter list <T>
- 
+
+enum FilterType: String {
+    case beginsWith = "BEGINSWITH"
+    case contains = "CONTAINS[c]"
+}
+
 struct FilteredList<T: NSManagedObject, Content: View>: View {
     
     
@@ -38,8 +43,8 @@ struct FilteredList<T: NSManagedObject, Content: View>: View {
     }
     }
     
-    init(type: String = "CONTAINS[c]", filterKey: String, filterValue: String, @ViewBuilder content: @escaping (T) -> Content) {
-        _fetchRequest = FetchRequest<T>(sortDescriptors: [], predicate: NSPredicate(format: "%K \(type) %@", filterKey, filterValue))
+    init(type: FilterType = .contains, filterKey: String, filterValue: String, @ViewBuilder content: @escaping (T) -> Content) {
+        _fetchRequest = FetchRequest<T>(sortDescriptors: [], predicate: NSPredicate(format: "%K \(type.rawValue) %@", filterKey, filterValue))
         self.content = content
     }
 //    func zapIt(indexSet: IndexSet) {
