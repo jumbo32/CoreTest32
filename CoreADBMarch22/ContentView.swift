@@ -11,12 +11,14 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
     @State private var lastNameFilter = "A"
     @State private var filterType = FilterType.beginsWith
+    @State private var sortDescriptors = [SortDescriptor<Singer>]()
+    
     var body: some View {
         VStack {
 // Hord Coded FilteredList
 //            FilteredList(filter: lastNameFilter)
 // New Dynamic FilteredList Call
-            FilteredList(type: filterType, filterKey: "lastName", filterValue: lastNameFilter) { (singer: Singer) in
+            FilteredList(type: .beginsWith, filterKey: "lastName", filterValue: lastNameFilter, sortDescriptors: sortDescriptors) { (singer: Singer) in
                 Text("\(singer.wrappedFirstName) \(singer.wrappedLastName)")
             }
             
@@ -50,7 +52,13 @@ struct ContentView: View {
             Button("Contains") {
                 filterType = .contains
             }
-        }
+            Button("Sort A-Z") {
+                sortDescriptors = [SortDescriptor(\.firstName)]
+            }
+
+            Button("Sort Z-A") {
+                sortDescriptors = [SortDescriptor(\.firstName, order: .reverse)]
+            }        }
     }
 }
 
