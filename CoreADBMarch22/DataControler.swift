@@ -9,7 +9,7 @@ import CoreData
 import Foundation
 
 class DataController: ObservableObject {
-    let container = NSPersistentContainer(name: "CoreADBDF2")
+    let container = NSPersistentContainer(name: "CoreADBDF3")
     
     init() {
         container.loadPersistentStores { description, error in

@@ -23,6 +23,8 @@ import SwiftUI
 // Example of generic filter list <T>
  
 struct FilteredList<T: NSManagedObject, Content: View>: View {
+    
+    
     @Environment(\.managedObjectContext) var moc
     @FetchRequest var fetchRequest: FetchedResults<T>
     let content: (T) -> Content
@@ -36,8 +38,8 @@ struct FilteredList<T: NSManagedObject, Content: View>: View {
     }
     }
     
-    init(filterKey: String, filterValue: String, @ViewBuilder content: @escaping (T) -> Content) {
-        _fetchRequest = FetchRequest<T>(sortDescriptors: [], predicate: NSPredicate(format: "%K BEGINSWITH %@", filterKey, filterValue))
+    init(type: String = "CONTAINS[c]", filterKey: String, filterValue: String, @ViewBuilder content: @escaping (T) -> Content) {
+        _fetchRequest = FetchRequest<T>(sortDescriptors: [], predicate: NSPredicate(format: "%K \(type) %@", filterKey, filterValue))
         self.content = content
     }
 //    func zapIt(indexSet: IndexSet) {

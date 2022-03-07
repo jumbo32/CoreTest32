@@ -10,13 +10,13 @@ import SwiftUI
 struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
     @State private var lastNameFilter = "A"
-    
+    @State private var filterType = "CONTAINS[c]"
     var body: some View {
         VStack {
 // Hord Coded FilteredList
 //            FilteredList(filter: lastNameFilter)
 // New Dynamic FilteredList Call
-            FilteredList(filterKey: "lastName", filterValue: lastNameFilter) { (singer: Singer) in
+            FilteredList(type: filterType, filterKey: "lastName", filterValue: lastNameFilter) { (singer: Singer) in
                 Text("\(singer.wrappedFirstName) \(singer.wrappedLastName)")
             }
             
@@ -43,7 +43,13 @@ struct ContentView: View {
             Button("Show S") {
                 lastNameFilter = "S"
             }
-            
+            Button("Begins with") {
+                filterType = "BEGINSWITH"
+            }
+
+            Button("Contains") {
+                filterType = "CONTAINS[c]"
+            }
         }
     }
 }
