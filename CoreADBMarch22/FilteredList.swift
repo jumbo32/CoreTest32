@@ -23,16 +23,61 @@ import SwiftUI
 // Example of generic filter list <T>
  
 struct FilteredList<T: NSManagedObject, Content: View>: View {
+    @Environment(\.managedObjectContext) var moc
     @FetchRequest var fetchRequest: FetchedResults<T>
     let content: (T) -> Content
     var body: some View {
-        List(fetchRequest, id: \.self) {item in
-            self.content(item)
-        }
+        List {
+//        List(fetchRequest, id: \.self) {item in
+//            self.content(item)
+        ForEach(fetchRequest, id: \.self) {item in
+                self.content(item)
+        }.onDelete(perform: zapIt)
+    }
     }
     
     init(filterKey: String, filterValue: String, @ViewBuilder content: @escaping (T) -> Content) {
         _fetchRequest = FetchRequest<T>(sortDescriptors: [], predicate: NSPredicate(format: "%K BEGINSWITH %@", filterKey, filterValue))
         self.content = content
     }
+//    func zapIt(indexSet: IndexSet) {
+//        items.remove(atOffsets: indexSet)
+//        do {
+//            try moc.save()
+//        } catch {
+//            let nsError = error as NSError
+//            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+//        }
+//    }
+    
+    func zapIt(at offsets: IndexSet) {
+        for index in offsets {
+            let item = fetchRequest[index]
+            moc.delete(item)
+        }
+        do {
+            try moc.save()
+        }
+        catch {
+            // Replace this implementation with code to handle the error appropriately.
+            // fatalError() causes the application to generate a crash log and terminate. You should not
+            // use this function in a shipping application, although it may be useful during development.
+                let nsError = error as NSError
+                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")        }
+    }
+    
+    
+//    private func delete(offsets: IndexSet) {
+//        withAnimation { offsets.map { fetchRequest.wrappedValue[$0] }.forEach(moc.delete)
+//
+//            do {
+//                try moc.save()
+//            } catch {
+//                // Replace this implementation with code to handle the error appropriately.
+//                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+//                let nsError = error as NSError
+//                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+//            }
+//        }
+//    }
 }
