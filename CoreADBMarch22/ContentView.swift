@@ -9,16 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
-    @State private var lastNameFilter = "A"
-    @State private var filterType = FilterType.beginsWith
+//    @State private var lastNameFilter = "A"
+//    @State private var filterType = FilterType.beginsWith
     @State private var sortDescriptors = [SortDescriptor<Singer>]()
-    
+//    @State private var sortDecending = false
+    @State private var sortme: SortOrder = .reverse
+
     var body: some View {
         VStack {
 // Hord Coded FilteredList
 //            FilteredList(filter: lastNameFilter)
 // New Dynamic FilteredList Call
-            FilteredList(type: .beginsWith, filterKey: "lastName", filterValue: lastNameFilter, sortDescriptors: sortDescriptors) { (singer: Singer) in
+            FilteredList(sortDescriptors: sortDescriptors) { (singer: Singer) in
                 Text("\(singer.wrappedFirstName) \(singer.wrappedLastName)")
             }
             
@@ -38,20 +40,13 @@ struct ContentView: View {
                 try? moc.save()
             }
             
-            Button("Show A") {
-                lastNameFilter = "A"
-            }
-            
-            Button("Show S") {
-                lastNameFilter = "S"
-            }
-            Button("Begins with") {
-                filterType = .beginsWith
+ 
+            Button("SortIt") {
+                toggleSortOrder()
+                sortDescriptors = [SortDescriptor(\.firstName, order: sortme )]
+                
             }
 
-            Button("Contains") {
-                filterType = .contains
-            }
             Button("Sort A-Z") {
                 sortDescriptors = [SortDescriptor(\.firstName)]
             }
@@ -65,6 +60,11 @@ struct ContentView: View {
             }
         }
     }
+    
+    private func toggleSortOrder() {
+         sortme = (sortme == .reverse ? .forward : .reverse)
+         print("toggleSortOrder: order = \(sortme)")
+     }
 }
 
 struct ContentView_Previews: PreviewProvider {

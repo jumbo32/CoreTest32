@@ -43,8 +43,14 @@ struct FilteredList<T: NSManagedObject, Content: View>: View {
     }
     }
     
-    init(type: FilterType = .contains, filterKey: String, filterValue: String,sortDescriptors: [SortDescriptor<T>] = [], @ViewBuilder content: @escaping (T) -> Content) {
-        _fetchRequest = FetchRequest<T>(sortDescriptors: sortDescriptors, predicate: NSPredicate(format: "%K \(type.rawValue) %@", filterKey, filterValue))
+//    init(type: FilterType = .contains, filterKey: String, filterValue: String,sortDescriptors: [SortDescriptor<T>] = [], @ViewBuilder content: @escaping (T) -> Content) {
+//        _fetchRequest = FetchRequest<T>(sortDescriptors: sortDescriptors,
+//                predicate: NSPredicate(format: "%K \(type.rawValue) %@", filterKey, filterValue))
+        
+        init(sortDescriptors: [SortDescriptor<T>] = [], @ViewBuilder content: @escaping (T) -> Content) {
+            _fetchRequest = FetchRequest<T>(sortDescriptors: sortDescriptors,
+                    predicate: nil)
+        
         self.content = content
     }
 //    func zapIt(indexSet: IndexSet) {
