@@ -51,6 +51,7 @@ struct ContentView: View {
             
             Button("Sort Reset") {
                 sortDescriptors = [SortDescriptor<Singer>]()
+                print("toggleSortOrder: Sort Reset")
             }
         }
     }
