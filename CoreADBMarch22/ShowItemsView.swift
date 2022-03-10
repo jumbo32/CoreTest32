@@ -31,7 +31,7 @@ struct ShowItemsView: View {
                 FilteredList(sortDescriptors: sortDescriptors) { (singer: Singer) in
                         
                     //Text("\(singer.wrappedFirstName) \(singer.wrappedLastName)")
-                
+                    NavigationLink(destination: EditItemView(singer: singer)) {
             
             HStack {
                 Text(singer.firstName ?? "nil").modifier(CellFormatLight())
@@ -39,6 +39,7 @@ struct ShowItemsView: View {
             }
                     
                 }.listStyle(PlainListStyle())
+                }
             Button("Add") {
                 let taylor = Singer(context: moc)
                 taylor.firstName = "Taylor"

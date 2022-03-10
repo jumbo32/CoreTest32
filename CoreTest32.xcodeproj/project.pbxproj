@@ -11,6 +11,7 @@
 		8F44076627D9935C008FDBD5 /* CellFormatLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F44076527D9935C008FDBD5 /* CellFormatLight.swift */; };
 		8F83591F27D9657C00049824 /* ShowItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F83591E27D9657C00049824 /* ShowItemsView.swift */; };
 		8F83592127D967A400049824 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F83592027D967A400049824 /* AddItemView.swift */; };
+		8F87CAD227DA723C00AA97AA /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F87CAD127DA723C00AA97AA /* EditItemView.swift */; };
 		8FE0755C27D502A4008E08D3 /* CoreADBMarch22App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE0755B27D502A4008E08D3 /* CoreADBMarch22App.swift */; };
 		8FE0755E27D502A4008E08D3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE0755D27D502A4008E08D3 /* ContentView.swift */; };
 		8FE0756027D502A6008E08D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FE0755F27D502A6008E08D3 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 		8F44076527D9935C008FDBD5 /* CellFormatLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellFormatLight.swift; sourceTree = "<group>"; };
 		8F83591E27D9657C00049824 /* ShowItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowItemsView.swift; sourceTree = "<group>"; };
 		8F83592027D967A400049824 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
+		8F87CAD127DA723C00AA97AA /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
 		8FE0755827D502A4008E08D3 /* CoreTest32.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreTest32.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FE0755B27D502A4008E08D3 /* CoreADBMarch22App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreADBMarch22App.swift; sourceTree = "<group>"; };
 		8FE0755D27D502A4008E08D3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				8FE0757527D51777008E08D3 /* FilteredList.swift */,
 				8F83591E27D9657C00049824 /* ShowItemsView.swift */,
 				8F83592027D967A400049824 /* AddItemView.swift */,
+				8F87CAD127DA723C00AA97AA /* EditItemView.swift */,
 				8FE0755F27D502A6008E08D3 /* Assets.xcassets */,
 				8FE0756127D502A6008E08D3 /* Preview Content */,
 				8FE0756E27D511FF008E08D3 /* CoreTest32.xcdatamodeld */,
@@ -169,6 +172,7 @@
 				8FE0757427D51375008E08D3 /* Singer+CoreDataProperties.swift in Sources */,
 				8FE0755E27D502A4008E08D3 /* ContentView.swift in Sources */,
 				8FE0757327D51375008E08D3 /* Singer+CoreDataClass.swift in Sources */,
+				8F87CAD227DA723C00AA97AA /* EditItemView.swift in Sources */,
 				8F44076627D9935C008FDBD5 /* CellFormatLight.swift in Sources */,
 				8F83591F27D9657C00049824 /* ShowItemsView.swift in Sources */,
 				8FE0756A27D5031C008E08D3 /* DataControler.swift in Sources */,
