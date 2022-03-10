@@ -9,7 +9,7 @@ import CoreData
 import Foundation
 
 class DataController: ObservableObject {
-    let container = NSPersistentContainer(name: "CoreADBDynSort")
+    let container = NSPersistentContainer(name: "CoreTest32")
     
     init() {
         container.loadPersistentStores { description, error in
