@@ -9,9 +9,7 @@ import SwiftUI
 struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
     
-    @FetchRequest(
-        sortDescriptors: [],
-        animation: .default)
+    @FetchRequest(sortDescriptors: [])
     private var items: FetchedResults<Singer>
     
     var body: some View {

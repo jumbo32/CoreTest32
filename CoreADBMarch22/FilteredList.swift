@@ -13,10 +13,14 @@ struct FilteredList<T: NSManagedObject, Content: View>: View {
     @FetchRequest var fetchRequest: FetchedResults<T>
     let content: (T) -> Content
     var body: some View {
+        
         List {
             ForEach(fetchRequest, id: \.self) {item in
                 self.content(item)
-            }.onDelete(perform: zapIt)
+            }
+            .onDelete(perform: zapIt)
+            
+            
         }
     }
     init(sortDescriptors: [SortDescriptor<T>] = [], @ViewBuilder content: @escaping (T) -> Content) {
